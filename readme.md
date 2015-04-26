@@ -12,10 +12,9 @@ Modifikasi Dari https://github.com/syiewa/l5-sis
 
 
 # SS Tampilan
-
-<img src="http://pasteboard.co/iNDJ4X.png"> <br />
-<img src="http://pasteboard.co/iUnqzx.png"> <br />
-<img src="http://pasteboard.co/iWK264.png"> <br />
+![alt tag](http://pasteboard.co/iNDJ4X.png)
+![alt tag](http://pasteboard.co/iUnqzx.png)
+![alt tag](http://pasteboard.co/iWK264.png)
 
 # By Me
 
