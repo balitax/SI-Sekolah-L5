@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\JawabanRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Jawaban;
+use App\Models\jawaban;
 use Illuminate\Contracts\Auth\Guard;
 
 class JawabanController extends Controller {
