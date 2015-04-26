@@ -12,7 +12,7 @@ Modifikasi Dari https://github.com/syiewa/l5-sis
 
 
 # SS Tampilan
-![alt tag](http://pasteboard.co/iNDJ4X.png)
+![alt tag](https://github.com/balitax/SI-Sekolah-L5/blob/master/SS/berita%20admin.png)
 ![alt tag](http://pasteboard.co/iUnqzx.png)
 ![alt tag](http://pasteboard.co/iWK264.png)
 
