@@ -6,14 +6,16 @@ Modifikasi Dari https://github.com/syiewa/l5-sis
 <ol>
  <li>Penambahan beberapa fitur dan pembenahan beberapa fitur.</li>
  <li>Belajar Laravel 5 dan Angular JS.</li>
- <li>Template admin yang lebih segar dan material desain.</li>
- <li>Template halaman depan sekolah yang lebih rapi dan minimalis</li>
+ <li></li>
+ <li></li>
 </ol>
 
 
 # SS Tampilan
 
-# Next To Do
+<img src="http://pasteboard.co/iNDJ4X.png"> <br />
+<img src="http://pasteboard.co/iUnqzx.png"> <br />
+<img src="http://pasteboard.co/iWK264.png"> <br />
 
 # By Me
 
