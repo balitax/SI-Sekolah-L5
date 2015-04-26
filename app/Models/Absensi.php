@@ -22,7 +22,7 @@ class Absensi extends Model {
     }
 
     public function scopeGetAbsen($query, $kelas, $bulan, $tahun) {
-        $kampret = DB::select(DB::raw(
+        $absenx = DB::select(DB::raw(
                                 "SELECT s.`nama_siswa` , s.`nis` , 
                         IFNULL(h.hadir,0) AS hadir,
                         IFNULL(sk.sakit,0) AS sakit,
@@ -81,10 +81,10 @@ class Absensi extends Model {
                             WHERE  tahun = ".$tahun." AND bulan = ".$bulan."
                             GROUP BY id_siswa
                         ) AS t ON t.id_siswa = s.id_siswa
-                        WHERE id_kelas=".$kelas
+                        WHERE id_kelas=".$kelas." ORDER BY s.nama_siswa ASC"
                 
         ));
-        return $kampret;
+        return $absenx;
     }
 
 }

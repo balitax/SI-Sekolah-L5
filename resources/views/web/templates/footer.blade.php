@@ -4,11 +4,25 @@
         <div class="bottom-footer">
             <div class="row">
                 <div class="col-md-5">
-                    <p class="small-text">&copy; Copyright <?php echo date('Y'); ?>. Allright reserved <a href="{{url('')}}">SEKOLAH Q</a></p>
+                    <p class="small-text">&copy; Copyright <?php echo date('Y'); ?>. Allright reserved <a href="{{url('')}}"></a></p>
                 </div> <!-- /.col-md-5 -->
                 <div class="col-md-7">
                     <ul class="footer-nav">
-                        <li class="active"><a href="{{url('')}}">Home</a></li>
+                        <li><a href="{{url('')}}">Home</a></li>
+                    <?php
+                        $menu = DB::table('tbl_menu')->where('id_parent','0')->Orderby('id','ASC')-> get();
+                    ?>
+                    @foreach($menu as $mn)
+						<li>
+							@if($mn->tipe_menu == '1')
+								<a href="{{url('page',$mn->slug_menu)}}">{{$mn->title}} </a>
+							@elseif($mn->tipe_menu == '3')
+								<a href="{{url($mn->slug_menu)}}">{{$mn->title}} </a>
+							@else
+								<a href="{{url($mn->slug_menu)}}">{{$mn->title}} </a>
+							@endif
+                        </li>
+                    @endforeach
                     </ul>
                 </div> <!-- /.col-md-7 -->
             </div> <!-- /.row -->

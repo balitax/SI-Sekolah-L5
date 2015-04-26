@@ -15,15 +15,19 @@ Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 Route::get('/lihatpoll', 'FrontController@polling');
 Route::post('/tambahpoll', 'FrontController@tambahpoll');
 Route::get('/berita', 'FrontController@beritalist');
-Route::get('baca/berita/{slug}', 'FrontController@berita');
+Route::get('/baca/berita/{slug}', 'FrontController@berita');
 Route::get('/pengumuman', 'FrontController@pengumumanlist');
-Route::get('/pengumuman/{id}', 'FrontController@pengumuman');
+Route::get('/baca/pengumuman/{slug}', 'FrontController@pengumuman');
 Route::get('/agenda', 'FrontController@agendalist');
-Route::get('/agenda/{id}', 'FrontController@agenda');
+Route::get('/baca/agenda/{slug}', 'FrontController@agenda');
 Route::get('/galeri', 'FrontController@album');
 Route::get('/download', 'FrontController@download');
 Route::get('/galeri/{id}', 'FrontController@foto');
-Route::get('/page/{id}', ['as' => 'page.menu', 'uses' => 'FrontController@halaman']);
+Route::get('/page/{slug}', 'FrontController@halaman');
+Route::get('/datasiswa', 'FrontController@datasiswa');
+Route::get('/dataguru', 'FrontController@dataguru');
+Route::get('/datapegawai', 'FrontController@datapegawai');
+Route::get('/absensi', 'FrontController@absensi');
 
 Route::get('/login', ['middleware' => 'guest', function() {
 return view('backend.login');
@@ -52,6 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     return view('backend.sekolah');
 }]);
     Route::resource('datastatis', 'Admin\DataStatisController');
+    Route::resource('setting', 'Admin\SettingController');
     Route::resource('datamenu','Admin\MenuController');
     Route::resource('berita', 'Admin\BeritaController');
     Route::resource('pengumuman', 'Admin\PengumumanController');
@@ -68,6 +73,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('upload/update', 'Admin\UploadController@updateFile');
     Route::post('absensi/create', ['as' => 'admin.absensi.create', 'uses' => 'Admin\AbsensiController@create']);
     Route::post('absensi/show', ['as' => 'admin.absensi.show', 'uses' => 'Admin\AbsensiController@show']);
+    Route::post('setting/save', 'Admin\SettingController@update');
 });
 
 Route::group(['prefix' => 'guru','middleware' => 'auth'], function() {
@@ -103,6 +109,10 @@ Route::group(['prefix' => 'api'], function() {
 
     Route::get('kelas', 'Admin\KelasController@apiKelas');
     Route::get('kelas/{id}', 'Admin\KelasController@show');
+
+    Route::get('setting', 'Admin\SettingController@apiSetting');
+    Route::get('setting/{id}', 'Admin\SettingController@show');
+
 
     Route::get('kelas/{id}/siswa', 'Admin\SiswaController@apiSiswa');
     Route::get('siswa/{id}', 'Admin\SiswaController@show');

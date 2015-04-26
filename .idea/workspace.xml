@@ -1,7 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d17aa582-2ad0-40ce-9de8-7c9e3e7a6617" name="Default" comment="" />
+    <list default="true" id="d17aa582-2ad0-40ce-9de8-7c9e3e7a6617" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/Setting.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/SettingRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/absensi.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/js/controller/admin-setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/agenda.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/agenda_detail.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/berita.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/beritadetail.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/dataguru.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/datapegawai.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/datasiswa.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/download.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/galeri.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/galeri_detail.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/halaman.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/backend/setting/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/lihat_poll.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/pengumuman.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/web/pengumuman_detail.blade.php" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-absensi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-agenda.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-berita.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-datastatis.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-foto.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-galeri.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-jawaban.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-kelas.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-pegawai.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-pengumuman.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-polling.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-siswa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\admin-upload.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\guru-absensi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\guru-pegawai.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\guru-pengumuman.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\guru-upload.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\controller23\login.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\data\google_maps\markers.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\jplayer\addons\jquery.jplayer.swf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\addons\infobox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\addons\infobox_packed.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\addons\markerclusterer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.microdata.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.microformat.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.overlays.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.rdfa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\admin\js\plugins\maps_google\jquery-ui-map\ui\jquery.ui.map.services.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\theme\images\bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\assets\theme\images\jakmen.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\css\main-responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\css\main.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\css\theme_blue.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\fonts\clip-font.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\fonts\clip-font.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\fonts\clip-font.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\fonts\clip-font.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\lte-ie7.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\fonts\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\images\team-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\images\team-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\js\main.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\animate.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\_base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\bounce.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\flash.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\pulse.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\shake.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\swing.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\tada.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\attention_seekers\wobble.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_entrances\bounceIn.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_entrances\bounceInDown.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_entrances\bounceInLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_entrances\bounceInRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_entrances\bounceInUp.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_exits\bounceOut.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_exits\bounceOutDown.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_exits\bounceOutLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_exits\bounceOutRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\bouncing_exits\bounceOutUp.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeIn.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInDown.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInDownBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInLeftBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInRightBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInUp.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_entrances\fadeInUpBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOut.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutDown.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutDownBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutLeftBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutRightBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutUp.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\fading_exits\fadeOutUpBig.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\flippers\flip.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\flippers\flipInX.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\flippers\flipInY.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\flippers\flipOutX.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\flippers\flipOutY.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\lightspeed\lightSpeedIn.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\lightspeed\lightSpeedOut.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_entrances\rotateIn.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_entrances\rotateInDownLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_entrances\rotateInDownRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_entrances\rotateInUpLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_entrances\rotateInUpRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_exits\rotateOut.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_exits\rotateOutDownLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_exits\rotateOutDownRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_exits\rotateOutUpLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\rotating_exits\rotateOutUpRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideInDown.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideInLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideInRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideOutLeft.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideOutRight.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\sliders\slideOutUp.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\specials\hinge.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\specials\rollIn.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\animate.css\source\specials\rollOut.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\blockUI\jquery.blockUI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\_backup v3.0.2\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap-theme.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap-theme.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\css\bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\js\bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\bootstrap\js\bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\colorbox.ai" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\colorbox.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\ajax.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\daisy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\daisy@2x.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\homer.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\marylou.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\ohoopee1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\ohoopee2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\content\ohoopee3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\images\border.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\images\loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\images\overlay.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example1\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example2\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example2\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example2\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example2\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example3\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example3\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example3\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example3\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example4\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example4\images\border1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example4\images\border2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example4\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example4\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\colorbox.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\images\border.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\images\controls.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\images\loading_background.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\example5\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-ar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-bg.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-cs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-da.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-de.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-es.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-et.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-fa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-fi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-fr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-gl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-he.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-hr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-hu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-id.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-it.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-ja.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-kr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-lv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-nl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-no.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-pl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-ro.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-ru.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-si.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-sk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-sr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-sv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-tr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-uk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\i18n\jquery.colorbox-zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\jquery.colorbox-min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\colorbox\jquery.colorbox.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\excanvas.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\README.mdown" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\changelog.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\basic-carousel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\carousel-min-max.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\css\demo.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\dynamic-carousel-min-max.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-medium\eot\1110FC_0.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-medium\svg\1110FC_0.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-medium\svg\svg_test.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-medium\ttf\1110FC_0.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-medium\woff\1110FC_0.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-regular\eot\11014B_0.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-regular\svg\11014B_0.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-regular\svg\svg_test.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-regular\ttf\11014B_0.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-regular\woff\11014B_0.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-semibold\eot\style_169898.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-semibold\svg\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-semibold\svg\style_169898.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-semibold\ttf\style_169898.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\fonts\webfonts\geo-semibold\woff\style_169898.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\images\kitchen_adventurer_caramel.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\images\kitchen_adventurer_cheesecake_brownie.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\images\kitchen_adventurer_donut.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\images\kitchen_adventurer_lemon.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\images\logo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\demo.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\froogaloop.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\jquery.easing.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\jquery.fitvid.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\jquery.mousewheel.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\modernizr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\shBrushCss.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\shBrushJScript.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\shBrushXml.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\js\shCore.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\thumbnail-controlnav.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\thumbnail-slider.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\video-wistia.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\demo\video.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\flexslider.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\fonts\flexslider-icon.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\fonts\flexslider-icon.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\fonts\flexslider-icon.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\fonts\flexslider-icon.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\images\bg_play_pause.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\jquery.flexslider-min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\flex-slider\jquery.flexslider.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\icons.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\larger.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\list.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\path.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\_backup v 4.0.3\scss\font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\css\font-awesome.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\css\font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\fonts\FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\fonts\fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\fonts\fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\fonts\fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\fonts\fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\bordered-pulled.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\core.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\fixed-width.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\font-awesome.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\icons.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\larger.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\list.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\mixins.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\path.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\rotated-flipped.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\spinning.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\stacked.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_bordered-pulled.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_core.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_fixed-width.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_larger.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_path.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_rotated-flipped.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_spinning.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_stacked.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\font-awesome\scss\font-awesome.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\demo.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\twitter-bootstrap-hover-dropdown.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\hover-dropdown\twitter-bootstrap-hover-dropdown.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\html5shiv-printshiv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jQuery-lib\1.10.2\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jQuery-lib\2.0.3\jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\MIT-LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\cookie.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\jquery.cookie.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\test\malformed_cookie.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\test\server.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery-cookie\test\tests.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\AUTHORS.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\CHANGELOG" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\appear.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.appear\jquery.appear.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\HISTORY.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\component.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\jquery.transit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\test\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\jquery.transit\test\test.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\jquery.mixitup.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\mixitup.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\mixitup\src\jquery.mixitup.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\front\plugins\respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head-.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\public\upload\slider\head5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\absensi.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\agenda.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\agendalist.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\album.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\berita.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\beritalist.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\dataguru.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\datapegawai.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\datasiswa.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\download.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\foto.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\home.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\lihatpoll.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\pengumuman.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\pengumumanlist.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\post.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\templates\footer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\templates\header.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\templates\index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\front\templates\sidebar.blade.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Absensi.php" afterPath="$PROJECT_DIR$/app/Models/Absensi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/breadcrumbs.php" afterPath="$PROJECT_DIR$/app/Http/breadcrumbs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/theme/css/color-scheme.css" afterPath="$PROJECT_DIR$/public/assets/theme/css/color-scheme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/backend/templates/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/backend/templates/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/web/templates/header.blade.php" afterPath="$PROJECT_DIR$/resources/views/web/templates/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/web/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/web/home.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/web/templates/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/web/templates/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/js/siswa.js" afterPath="$PROJECT_DIR$/public/assets/js/siswa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SEKOLAH.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,86 +466,22 @@
     <favorites_list name="SEKOLAH" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backend/pengumuman/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1734">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/front/templates/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0" vertical-offset="1258" max-vertical-offset="1836">
-              <caret line="100" column="13" selection-start-line="84" selection-start-column="8" selection-end-line="100" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/web/templates/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3846154" vertical-offset="303" max-vertical-offset="884">
-              <caret line="23" column="87" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
-              <folding>
-                <marker date="1429750385954" expanded="true" signature="113:121" placeholder="..." />
-                <marker date="1429750385954" expanded="true" signature="193:201" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/web/templates/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8192771" vertical-offset="0" max-vertical-offset="612">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="php artisan serve" />
+    </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Data.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/datastatis/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/datastatis/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/BeritaController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/DataStatisPostRequest.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/admin-datastatis.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DataStatisController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/datastatis/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/templates/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/templates/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/dashboard.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/pegawai/edit.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/guru-pengumuman.js" />
-        <option value="$PROJECT_DIR$/resources/views/guru/pengumuman/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/pengumuman/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/pengumuman/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/upload/create.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/admin-upload.js" />
-        <option value="$PROJECT_DIR$/resources/views/guru/upload/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/upload/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/absensi/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/absensi/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guru/absensi/edit.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/guru-absensi.js" />
-        <option value="$PROJECT_DIR$/resources/views/guru/absensi/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/absensi/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/admin-absensi.js" />
-        <option value="$PROJECT_DIR$/public/assets/js/controller/admin-agenda.js" />
         <option value="$PROJECT_DIR$/public/assets/js/controller/admin-berita.js" />
         <option value="$PROJECT_DIR$/public/assets/js/controller/admin-foto.js" />
         <option value="$PROJECT_DIR$/public/assets/js/controller/admin-galeri.js" />
@@ -122,14 +494,45 @@
         <option value="$PROJECT_DIR$/public/assets/js/controller/guru-pegawai.js" />
         <option value="$PROJECT_DIR$/public/assets/js/controller/guru-upload.js" />
         <option value="$PROJECT_DIR$/resources/views/front/templates/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/templates/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
         <option value="$PROJECT_DIR$/public/assets/theme/css/main.css" />
-        <option value="$PROJECT_DIR$/public/assets/theme/css/color-scheme.css" />
-        <option value="$PROJECT_DIR$/resources/views/web/templates/header.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/web/home.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/web/templates/footer.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/theme/css/color-scheme.css" />
+        <option value="$PROJECT_DIR$/resources/views/web/berita.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/templates/beritadetail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/pengumuman.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/templates/agenda.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/pengumuman_detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/agenda_detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/agenda.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/lihat_poll.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/halaman.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/download.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/album.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/galeri.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/galeri_detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/datasiswa.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/js/siswa.js" />
+        <option value="$PROJECT_DIR$/resources/views/web/beritadetail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/dataguru.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/dataguru.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/datapegawai.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Absensi.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/absensi.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/menu/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/datastatis/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/templates/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Pengaturan.php" />
+        <option value="$PROJECT_DIR$/app/Models/Setting.php" />
+        <option value="$PROJECT_DIR$/app/Http/breadcrumbs.php" />
+        <option value="$PROJECT_DIR$/public/assets/js/controller/admin-setting.js" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Requests/SettingRequest.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/setting/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/templates/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/web/templates/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FrontController.php" />
       </list>
     </option>
   </component>
@@ -148,7 +551,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -171,6 +574,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,7 +589,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
+              <option name="myItemId" value="SI-Sekolah-L5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -195,157 +599,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
+              <option name="myItemId" value="SI-Sekolah-L5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -359,81 +613,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
+              <option name="myItemId" value="SI-Sekolah-L5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SEKOLAH" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PROJEK\WEB\SI SEKUL\SI-Sekolah-L5\resources\views\web" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -450,6 +650,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -457,9 +660,6 @@
       <arguments />
       <pass-parent-envs>true</pass-parent-envs>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -478,29 +678,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46852124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17935579" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17935579" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -526,389 +727,469 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/guru/absensi/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/galeri_detail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0352504" vertical-offset="1607" max-vertical-offset="2312">
-          <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.26333907" vertical-offset="238" max-vertical-offset="1615">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+          <folding>
+            <element signature="e#788#822#0#HTML" expanded="false" />
+            <element signature="e#1822#1869#0#HTML" expanded="false" />
+            <element signature="e#2049#2070#0#HTML" expanded="false" />
+            <element signature="e#2403#2434#0#HTML" expanded="false" />
+            <element signature="e#2532#2553#0#HTML" expanded="false" />
+            <element signature="e#2890#2937#0#HTML" expanded="false" />
+            <element signature="e#3109#3130#0#HTML" expanded="false" />
+            <element signature="e#3457#3488#0#HTML" expanded="false" />
+            <element signature="e#3576#3597#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/guru/absensi/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/halaman.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6549296" vertical-offset="1260" max-vertical-offset="2091">
-          <caret line="96" column="76" selection-start-line="96" selection-start-column="76" selection-end-line="96" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/absensi/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47887325" vertical-offset="1360" max-vertical-offset="2091">
-          <caret line="96" column="73" selection-start-line="96" selection-start-column="73" selection-end-line="96" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-datastatis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="59" column="105" selection-start-line="59" selection-start-column="105" selection-end-line="59" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-berita.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056013178" vertical-offset="0" max-vertical-offset="607">
-          <caret line="44" column="112" selection-start-line="44" selection-start-column="112" selection-end-line="44" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-agenda.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="80" column="101" selection-start-line="80" selection-start-column="101" selection-end-line="80" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-absensi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89456344" vertical-offset="222" max-vertical-offset="867">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-foto.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.052718285" vertical-offset="2" max-vertical-offset="952">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-galeri.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08401977" vertical-offset="0" max-vertical-offset="607">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-jawaban.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-kelas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-pegawai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-pengumuman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="72" column="105" selection-start-line="72" selection-start-column="105" selection-end-line="72" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-polling.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-siswa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66886324" vertical-offset="2" max-vertical-offset="1088">
-          <caret line="114" column="92" selection-start-line="114" selection-start-column="92" selection-end-line="114" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/guru-absensi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0362438" vertical-offset="272" max-vertical-offset="1292">
-          <caret line="91" column="108" selection-start-line="91" selection-start-column="108" selection-end-line="91" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/guru-pegawai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/guru-pengumuman.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056013178" vertical-offset="0" max-vertical-offset="607">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/guru-upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.112026356" vertical-offset="0" max-vertical-offset="607">
-          <caret line="94" column="109" selection-start-line="94" selection-start-column="109" selection-end-line="94" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16803955" vertical-offset="0" max-vertical-offset="714">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/js/siswa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0362438" vertical-offset="629" max-vertical-offset="1666">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artisan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.05851979" vertical-offset="204" max-vertical-offset="799">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26333907" vertical-offset="51" max-vertical-offset="935">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="49504">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpspec.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="594">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46815833" vertical-offset="0" max-vertical-offset="581">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/XAMPP/htdocs/jakmeen/application/views/themes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="2363">
-          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/templates/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="850">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="38" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/theme/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.556338" vertical-offset="1081" max-vertical-offset="1649">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/templates/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8468158" vertical-offset="103" max-vertical-offset="1632">
-          <caret line="35" column="14" selection-start-line="13" selection-start-column="8" selection-end-line="35" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/theme/css/misc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="2607" max-vertical-offset="9282">
-          <caret line="165" column="0" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/theme/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5288303" vertical-offset="1838" max-vertical-offset="26860">
-          <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5669014" vertical-offset="1106" max-vertical-offset="1700">
+          <caret line="84" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="94" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/theme/css/color-scheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.965517" vertical-offset="3548" max-vertical-offset="4471">
-          <caret line="224" column="25" selection-start-line="224" selection-start-column="25" selection-end-line="224" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4471">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/templates/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="544" max-vertical-offset="1377">
-          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#nav#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FrontController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.3063684" vertical-offset="0" max-vertical-offset="2550">
-          <caret line="117" column="40" selection-start-line="117" selection-start-column="40" selection-end-line="117" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/templates/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.008606" vertical-offset="1748" max-vertical-offset="2329">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/absensi.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/assets/js/siswa.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32185885" vertical-offset="0" max-vertical-offset="1649">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.33217993" vertical-offset="743" max-vertical-offset="1649">
+          <caret line="55" column="15" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/templates/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/beritadetail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1015491" vertical-offset="1425" max-vertical-offset="2006">
-          <caret line="12" column="90" selection-start-line="9" selection-start-column="3" selection-end-line="12" selection-end-column="90" />
+        <state vertical-scroll-proportion="0.8080986" vertical-offset="289" max-vertical-offset="1989">
+          <caret line="44" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="111" selection-end-column="5" />
+          <folding>
+            <element signature="e#1200#1234#0#HTML" expanded="true" />
+            <element signature="e#1393#1414#0#HTML" expanded="true" />
+            <element signature="e#2503#2530#0#HTML" expanded="true" />
+            <element signature="e#3317#3364#0#HTML" expanded="true" />
+            <element signature="e#3544#3565#0#HTML" expanded="true" />
+            <element signature="e#3898#3929#0#HTML" expanded="true" />
+            <element signature="e#4027#4048#0#HTML" expanded="true" />
+            <element signature="e#4385#4432#0#HTML" expanded="true" />
+            <element signature="e#4604#4625#0#HTML" expanded="true" />
+            <element signature="e#4952#4983#0#HTML" expanded="true" />
+            <element signature="e#5071#5092#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/download.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40140846" vertical-offset="911" max-vertical-offset="2465">
+          <caret line="67" column="86" selection-start-line="0" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/pengumuman/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/dataguru.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1734">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.3469388" vertical-offset="204" max-vertical-offset="2363">
+          <caret line="23" column="74" selection-start-line="0" selection-start-column="0" selection-end-line="133" selection-end-column="5" />
+          <folding>
+            <element signature="e#621#655#0#HTML" expanded="false" />
+            <element signature="e#4386#4433#0#HTML" expanded="false" />
+            <element signature="e#4613#4634#0#HTML" expanded="false" />
+            <element signature="e#5333#5356#0#HTML" expanded="false" />
+            <element signature="e#5425#5448#0#HTML" expanded="false" />
+            <element signature="e#5945#5992#0#HTML" expanded="false" />
+            <element signature="e#6164#6185#0#HTML" expanded="false" />
+            <element signature="e#6512#6543#0#HTML" expanded="false" />
+            <element signature="e#6631#6652#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/datapegawai.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.029929578" vertical-offset="119" max-vertical-offset="2363">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding>
+            <element signature="e#627#661#0#HTML" expanded="false" />
+            <element signature="e#4395#4442#0#HTML" expanded="false" />
+            <element signature="e#4622#4643#0#HTML" expanded="false" />
+            <element signature="e#5342#5365#0#HTML" expanded="false" />
+            <element signature="e#5434#5457#0#HTML" expanded="false" />
+            <element signature="e#5954#6001#0#HTML" expanded="false" />
+            <element signature="e#6173#6194#0#HTML" expanded="false" />
+            <element signature="e#6521#6552#0#HTML" expanded="false" />
+            <element signature="e#6640#6661#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/datasiswa.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.961538" vertical-offset="418" max-vertical-offset="2295">
+          <caret line="49" column="117" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/templates/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/datastatis/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="1258" max-vertical-offset="1836">
-          <caret line="100" column="13" selection-start-line="84" selection-start-column="8" selection-end-line="100" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.8080986" vertical-offset="340" max-vertical-offset="1530">
+          <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/menu/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2618">
-          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.35915494" vertical-offset="527" max-vertical-offset="1683">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/templates/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615" vertical-offset="2550" max-vertical-offset="3230">
+          <caret line="172" column="48" selection-start-line="172" selection-start-column="48" selection-end-line="172" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Kelas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Pengumuman.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="357">
+          <caret line="12" column="31" selection-start-line="9" selection-start-column="4" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Polling.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Siswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Absensi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.3115318" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+          <folding>
+            <marker date="1429866342885" expanded="true" signature="-1:-1" placeholder="SELECT s.`na..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.25817555" vertical-offset="150" max-vertical-offset="731">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46815833" vertical-offset="0" max-vertical-offset="935">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3196">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4337349" vertical-offset="833" max-vertical-offset="2210">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/breadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.461538" vertical-offset="3550" max-vertical-offset="4131">
+          <caret line="234" column="30" selection-start-line="234" selection-start-column="23" selection-end-line="234" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-absensi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.61614496" vertical-offset="374" max-vertical-offset="1955">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-kelas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1870">
+          <caret line="79" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/kelas/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/KelasController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-54.923077" vertical-offset="0" max-vertical-offset="2074">
+          <caret line="84" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#46#81#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Pegawai.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05851979" vertical-offset="0" max-vertical-offset="581">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Setting.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23407917" vertical-offset="0" max-vertical-offset="581">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/KelasRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73666096" vertical-offset="150" max-vertical-offset="731">
+          <caret line="34" column="5" selection-start-line="22" selection-start-column="3" selection-end-line="34" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2800659" vertical-offset="0" max-vertical-offset="607">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153" vertical-offset="697" max-vertical-offset="2448">
+          <caret line="75" column="64" selection-start-line="75" selection-start-column="64" selection-end-line="75" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/SettingRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4230769" vertical-offset="99" max-vertical-offset="765">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/absensi/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/absensi/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8080986" vertical-offset="85" max-vertical-offset="1751">
+          <caret line="32" column="110" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/agenda/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.11971831" vertical-offset="68" max-vertical-offset="2125">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/js/controller/admin-agenda.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.08401977" vertical-offset="51" max-vertical-offset="2108">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/FotoRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.7848537" vertical-offset="456" max-vertical-offset="1037">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/FotoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.961538" vertical-offset="697" max-vertical-offset="2839">
+          <caret line="76" column="108" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="799" max-vertical-offset="1751">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding>
+            <element signature="e#46#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/setting/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46126762" vertical-offset="826" max-vertical-offset="2159">
+          <caret line="64" column="161" selection-start-line="64" selection-start-column="161" selection-end-line="64" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/foto/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8380282" vertical-offset="680" max-vertical-offset="1462">
+          <caret line="68" column="61" selection-start-line="68" selection-start-column="61" selection-end-line="68" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/web/templates/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3846154" vertical-offset="303" max-vertical-offset="884">
-          <caret line="23" column="87" selection-start-line="23" selection-start-column="87" selection-end-line="23" selection-end-column="87" />
+        <state vertical-scroll-proportion="0.0051635113" vertical-offset="286" max-vertical-offset="884">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding>
-            <marker date="1429750385954" expanded="true" signature="113:121" placeholder="..." />
-            <marker date="1429750385954" expanded="true" signature="193:201" placeholder="..." />
+            <marker date="1429915990877" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1429915990877" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/web/templates/footer.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/web/berita.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8192771" vertical-offset="0" max-vertical-offset="612">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.4888124" vertical-offset="277" max-vertical-offset="1734">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93631667" vertical-offset="153" max-vertical-offset="2533">
+          <caret line="41" column="67" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FrontController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5903614" vertical-offset="1510" max-vertical-offset="2703">
+          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/templates/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6437177" vertical-offset="204" max-vertical-offset="1955">
+          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/robots.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="607">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/web/absensi.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47887325" vertical-offset="0" max-vertical-offset="2703">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding />
         </state>
       </provider>

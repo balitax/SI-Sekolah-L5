@@ -45,7 +45,6 @@ angular.module('siswa').controller('kelas', function($scope, $http, $filter, $ti
     $scope.submit = function() {
         $scope.show = true;
         $http.get(baseURL.url('api/ambilsiswa/' + $scope.data['id_kelas'])).success(function(e) {
-
             $scope.telo = e;
         })
     }

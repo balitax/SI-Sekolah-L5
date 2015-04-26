@@ -13,9 +13,9 @@ error_reporting(0);
     <title>{{$title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="" />
+    <meta name="description" content="{{$desc}}">
+    <meta name="keywords" content="{{$key}}">
+    <meta name="author" content="Agus Cahyono" />
     <meta charset="UTF-8" />
     <!-- CSS Bootstrap & Custom -->
     <link href="{{asset('assets/theme/bootstrap/css/bootstrap.css')}}" rel="stylesheet" media="screen" />

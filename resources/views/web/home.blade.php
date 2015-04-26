@@ -8,18 +8,13 @@
                 <div class="main-slideshow" >
                     <div class="flexslider">
                         <ul class="slides">
+                            @foreach($slider_home as $news)
                             <li>
-                                <img src="{{asset('upload/slider/head.jpg')}}" />
+                                <a href="{{url('baca/berita',$news->slug_berita)}}" title="{{$news->judul_berita}}">
+                                    <img src="{{asset('upload/berita/'.$news->gambar)}}" />
+                                </a>
                             </li>
-                            <li>
-                                <img src="{{asset('upload/slider/head2.jpg')}}" />
-                            </li>
-                            <li>
-                                <img src="{{asset('upload/slider/head3.jpg')}}" />
-                            </li>
-                            <li>
-                                <img src="{{asset('upload/slider/head4.jpg')}}" />
-                            </li>
+                            @endforeach
                         </ul> <!-- /.slides -->
                     </div> <!-- /.flexslider -->
                 </div> <!-- /.main-slideshow -->
@@ -37,7 +32,7 @@
                         <div class="blog-list-post clearfix">
                             <div class="blog-list-thumb">
                                 <a href="{{url('baca/berita',$news->slug_berita)}}">
-                                    <img src="{{asset('upload/berita/'.$news->gambar)}}" />
+                                    <img src="{{asset('upload/berita/'.$news->gambar)}}" style="border: 1px solid #e2e9e6;" />
                                 </a>
                             </div>
                             <div class="blog-list-details">

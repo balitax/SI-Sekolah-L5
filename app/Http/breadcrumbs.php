@@ -232,3 +232,7 @@ Breadcrumbs::register('uploadedit', function($breadcrumbs) {
     $breadcrumbs->parent('upload');
     $breadcrumbs->push('Lihat Upload', route('admin.upload.edit'), ['icon' => '']);
 });
+Breadcrumbs::register('setting', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Setting Website', route('admin.setting.index'), ['icon' => '']);
+});
