@@ -45,7 +45,24 @@ angular.module('siswa').controller('kelas', function($scope, $http, $filter, $ti
     $scope.submit = function() {
         $scope.show = true;
         $http.get(baseURL.url('api/ambilsiswa/' + $scope.data['id_kelas'])).success(function(e) {
-            $scope.telo = e;
+            $scope.siswa = e;
+            // fungsi sorting data ASC/DESC
+            $scope.paginate = function(value) {
+                var begin, end, index;
+                begin = ($scope.currentPage - 1) * $scope.numPerPage;
+                end = begin + $scope.numPerPage;
+                index = $scope.siswa.indexOf(value);
+                return (begin <= index && index < end);
+            };
+
+            $scope.$watch('query', function(query) {
+                $scope.siswa = e;
+                $scope.siswa = $filter('filter')($scope.siswa, $scope.query);
+                $scope.totalItems = $scope.siswa.length;
+                $scope.currentPage = 1;
+                $scope.numPerPage = 15;
+            }, true);
+
         })
     }
 
@@ -54,6 +71,7 @@ angular.module('siswa').controller('absensi', function($scope, $http, $filter, $
     $scope.data = {};
     $scope.show = false;
     $scope.telo = {};
+    $scope.siswa= {};
     $scope.kelas = {};
     $scope.date = [];
     $scope.tahun = [];

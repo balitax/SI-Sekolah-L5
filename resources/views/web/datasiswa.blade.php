@@ -18,16 +18,6 @@
         </div>
     </div>
 
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">stLight.options({publisher: "ce92a639-1e24-4484-88fc-66e4e66ca575", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-    <style type="text/css">
-        .stButton .stFb, .stButton .stTwbutton, .stButton .stMainServices
-        {
-            height: 50px;
-        }
-    </style>
-
     <div class="container" ng-app="siswa">
         <div class="row">
 
@@ -57,22 +47,21 @@
                                     <table id="sample-table-1" class="table table-bordered table-hover table-striped">
                                         <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Nomor Induk Siswa</th>
+                                            <th>NIS</th>
                                             <th>Nama</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr ng-repeat="kampret in telo">
-                                            <td><%$index+1%>
-                                            </td>
-                                            <td><%kampret['nis']%>
-                                            </td>
-                                            <td><%kampret['nama_siswa']%>
-                                            </td>
+                                        <tr ng-repeat="s in siswa | filter:paginate">
+                                            <td><%s['nis']%></td>
+                                            <td><%s['nama_siswa']%></td>
                                         </tr>
                                         </tbody>
                                     </table>
+                                    <pagination total-items="totalItems" ng-model="currentPage"
+                                            max-size="15" boundary-links="true"
+                                            items-per-page="numPerPage" class="pagination-sm">
+                                    </pagination>
                                 </div>
                                 <br />
                             </div>
