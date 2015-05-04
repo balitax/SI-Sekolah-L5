@@ -29,6 +29,11 @@ Route::get('/dataguru', 'FrontController@dataguru');
 Route::get('/datapegawai', 'FrontController@datapegawai');
 Route::get('/absensi', 'FrontController@absensi');
 
+Route::group(array('middleware' => 'auth'), function(){
+    Route::controller('filemanager', 'FilemanagerLaravelController');
+});
+
+
 Route::get('/login', ['middleware' => 'guest', function() {
 return view('backend.login');
 }]);

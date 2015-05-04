@@ -130,6 +130,8 @@ return [
         'App\Providers\ConfigServiceProvider',
         'App\Providers\EventServiceProvider',
         'App\Providers\RouteServiceProvider',
+
+        'Pqb\FilemanagerLaravel\FilemanagerLaravelServiceProvider',
         
     ],
     /*
@@ -177,6 +179,7 @@ return [
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View' => 'Illuminate\Support\Facades\View',
         'Breadcrumbs' => 'DaveJamesMiller\Breadcrumbs\Facade',
-        'Image' => 'Intervention\Image\Facades\Image'
+        'Image' => 'Intervention\Image\Facades\Image',
+        'FilemanagerLaravel'=> 'Pqb\FilemanagerLaravel\Facades\FilemanagerLaravel',
     ],
 ];

@@ -81,7 +81,13 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
         <script src="{{asset('assets/admin/js/module-sidebar.min.js')}}"></script>
         <script src="{{asset('assets/admin/js/theme-core.min.js')}}"></script>
 
-        <script src="{{asset('assets/plugins/ckeditor/ckeditor.js')}}"></script>
+        <script type="text/javascript" src="{{ url('') }}/tinymce/tinymce.min.js"></script>
+        <script type="text/javascript" src="{{ url('') }}/tinymce/tinymce_editor.js"></script>
+        <script type="text/javascript">
+        editor_config.selector = "textarea";
+        tinymce.init(editor_config);
+        </script>
+
         <script src="{{asset('assets/plugins/ckeditor/adapters/jquery.js')}}"></script>
         <script src="{{asset('assets/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
         <script src="{{asset('assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js')}}"></script>
