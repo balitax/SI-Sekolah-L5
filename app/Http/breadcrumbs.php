@@ -149,16 +149,16 @@ Breadcrumbs::register('siswaedit', function($breadcrumbs,$id) {
     $breadcrumbs->push('Edit Siswa', route('admin.kelas.{id}.siswa.edit', $id), ['icon' => '']);
 });
 Breadcrumbs::register('pegawai', function($breadcrumbs) {
-    $breadcrumbs->parent('sekolah');
-    $breadcrumbs->push('Data Pegawai', route('admin.pegawai.index'), ['icon' => '']);
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Manajemen User', route('admin.pegawai.index'), ['icon' => '']);
 });
 Breadcrumbs::register('pegawaicreate', function($breadcrumbs) {
     $breadcrumbs->parent('pegawai');
-    $breadcrumbs->push('Tambah Pegawai', route('admin.pegawai.create'), ['icon' => '']);
+    $breadcrumbs->push('Tambah Data User', route('admin.pegawai.create'), ['icon' => '']);
 });
 Breadcrumbs::register('pegawaiedit', function($breadcrumbs) {
     $breadcrumbs->parent('pegawai');
-    $breadcrumbs->push('Edit Pegawai', route('admin.pegawai.edit'), ['icon' => '']);
+    $breadcrumbs->push('Edit Profil User', route('admin.pegawai.edit'), ['icon' => '']);
 });
 Breadcrumbs::register('polling', function($breadcrumbs) {
     $breadcrumbs->parent('home');
@@ -235,4 +235,62 @@ Breadcrumbs::register('uploadedit', function($breadcrumbs) {
 Breadcrumbs::register('setting', function($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Setting Website', route('admin.setting.index'), ['icon' => '']);
+});
+Breadcrumbs::register('kategori', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Data Kategori Website', route('admin.kategori.index'), ['icon' => '']);
+});
+Breadcrumbs::register('kategoricreate', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Tambah Kategori Baru', route('admin.kategori.create'), ['icon' => '']);
+});
+Breadcrumbs::register('kategoriedit', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Edit Kategori', route('admin.kategori.edit'), ['icon' => '']);
+});
+
+Breadcrumbs::register('banner', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Gambar Banner', route('admin.banner.index'), ['icon' => '']);
+});
+
+Breadcrumbs::register('link', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Link Eksternal', route('admin.link.index'), ['icon' => '']);
+});
+
+Breadcrumbs::register('linkadd', function($breadcrumbs) {
+    $breadcrumbs->parent('link');
+    $breadcrumbs->push('Tambah Link Eksternal', route('admin.link.create'), ['icon' => '']);
+});
+
+Breadcrumbs::register('linkedit', function($breadcrumbs) {
+    $breadcrumbs->parent('link');
+    $breadcrumbs->push('Edit Link Eksternal', route('admin.link.create'), ['icon' => '']);
+});
+
+Breadcrumbs::register('publikasi', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Data Publikasi', route('admin.publikasi.index'), ['icon' => '']);
+});
+
+Breadcrumbs::register('publikasiadd', function($breadcrumbs) {
+    $breadcrumbs->parent('publikasi');
+    $breadcrumbs->push('Tambah Data Publikasi', route('admin.publikasi.create'), ['icon' => '']);
+});
+
+Breadcrumbs::register('publikasiedit', function($breadcrumbs) {
+    $breadcrumbs->parent('publikasi');
+    $breadcrumbs->push('Edit Data Publikasi', route('admin.publikasi.edit'), ['icon' => '']);
+});
+
+
+Breadcrumbs::register('pesan', function($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('Pesan Masuk', route('admin.kontak.index'), ['icon' => '']);
+});
+
+Breadcrumbs::register('pesanlihat', function($breadcrumbs) {
+    $breadcrumbs->parent('pesan');
+    $breadcrumbs->push('Lihat Pesan Masuk', route('admin.kontak.edit'), ['icon' => '']);
 });

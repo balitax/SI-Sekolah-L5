@@ -2,14 +2,15 @@
 /**
  * Created by PhpStorm.
  * User: balitax
- * Date: 20/04/2015
- * Time: 8:19
+ * Date: 18/05/2015
+ * Time: 19:55
  */
+
 
 namespace App\Http\Requests;
 use App\Http\Requests\Request;
 
-class MenuRequest extends Request {
+class KategoriRequest extends Request {
 
     public function authorize() {
         return true;
@@ -17,15 +18,13 @@ class MenuRequest extends Request {
 
     public function rules() {
         return [
-            'title'             => 'required',
-            'slug_menu'         => 'required',
+            'nama_kategori'             => 'required',
         ];
     }
 
     public function messages() {
         return [
-            'title.required'            => 'Nama Menu Di Perlukan!',
-            'slug_menu.required'        => 'Slug Menu Di Perlukan!',
+            'nama_kategori.required'            => 'Nama Kategori Di Perlukan!',
         ];
     }
 

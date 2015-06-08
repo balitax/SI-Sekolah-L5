@@ -22,13 +22,15 @@ class GaleriRequest extends Request {
      */
     public function rules() {
         return [
-            'nama_album' => 'required',
+            'nama_album'    => 'required',
+            'cover_album'   => 'required',
         ];
     }
 
     public function messages() {
         return [
-            'nama_album.required' => 'Nama album Diperlukan!',
+            'nama_album.required'   => 'Nama album Diperlukan!',
+            'cover_album.required'  => 'Cover album Diperlukan!',
         ];
     }
 

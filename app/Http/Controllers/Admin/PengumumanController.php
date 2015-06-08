@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 use App\Models\Pengumuman;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
+
 
 class PengumumanController extends Controller {
 
@@ -30,12 +33,7 @@ class PengumumanController extends Controller {
     }
 
     public function apiPengumuman() {
-        if ($this->auth->user()->status == 'guru') {
-            $penulis = $this->auth->user()->nama_pegawai;
-            $data = Pengumuman::orderBy('tanggal', 'desc')->where('penulis', $penulis)->get();
-        } else {
-            $data = Pengumuman::orderBy('tanggal', 'desc')->get();
-        }
+        $data = Pengumuman::orderBy('tanggal', 'desc')->get();
         return response()->json($data);
     }
 
@@ -110,7 +108,8 @@ class PengumumanController extends Controller {
         $input = $request->all();
         $input['penulis'] = $this->auth->user()->nama_pegawai;
         $pengumuman = Pengumuman::find($id);
-        $pengumuman->slug_pengumuman = Str::slug($request->judul_pengumuman);
+        $pengumuman->slug_pengumuman    = Str::slug($request->judul_pengumuman);
+        $pengumuman->isi                = Input::get('editor1');
         if ($pengumuman->update($input)) {
             return response()->json(array('success' => TRUE));
         }

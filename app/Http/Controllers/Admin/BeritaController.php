@@ -6,10 +6,15 @@ use App\Http\Requests\BeritaRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Berita;
+use App\Models\Kategori;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
+
+use Illuminate\Support\Facades\Input;
+use Illuminate\Html\FormFacade;
+use Illuminate\Html\HtmlFacade;
 
 class BeritaController extends Controller {
 
@@ -41,6 +46,7 @@ class BeritaController extends Controller {
     public function create() {
         //
         $data['title'] = 'Tambah Berita';
+        $data['kategori_berita']    = Kategori::all();
         return View('backend.berita.create', $data);
     }
 
@@ -49,38 +55,33 @@ class BeritaController extends Controller {
      *
      * @return Response
      */
-    public function store(BeritaRequest $request) {
-        $destinationPath = public_path('upload/berita');
-        $data = $request->except('file');
-        if ($request->has('data')) {
-            $data = json_decode($request->get('data'));
+    public function store() {
+
+        $berita             = new Berita();
+        $berita->tanggal    = date('Y-m-d');
+        $berita->waktu      = date('H:i:s');
+
+        $cekinputgbr = Input::file('file');
+
+        if(!empty($cekinputgbr)) {
+            $thefile            = Input::file('file');
+            $lokasi_simpan      = 'upload/berita';
+            $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
+            $upload_gambar      = Input::file('file')->move($lokasi_simpan, $filename);
+
+            $berita->gambar     = $filename;
         }
-        if (isset($data->id_berita)) {
-            $berita = Berita::find($data->id_berita);
-            if ($request->hasFile('file')) {
-                $checkfile = file_exists($destinationPath . '/' . $berita->gambar);
-                if ($checkfile) {
-                    unlink($destinationPath . '/' . $berita->gambar);
-                }
-                $berita->gambar = Str::random(30).'.'.$request->file('file')->getClientOriginalExtension();
-                $request->file('file')->move($destinationPath, $berita->gambar);
-            }
-        } else {
-            $berita = new Berita();
-            $berita->tanggal = date('Y-m-d');
-            $berita->waktu = date('H:i:s');
-            if ($request->hasFile('file')) {
-                $berita->gambar = Str::random(30).'.'.$request->file('file')->getClientOriginalExtension();
-                $request->file('file')->move($destinationPath, $berita->gambar);
-            }
-        }
-        $berita->judul_berita   = $data->judul_berita;
-        $berita->slug_berita    = Str::slug($data->judul_berita);
-        $berita->isi            = $data->isi;
-        $berita->author         = $this->auth->user()->nama_pegawai;
+        
+        $berita->judul_berita       = Input::get('judul_berita');
+        $berita->slug_berita        = Str::slug(Input::get('judul_berita'));
+        $berita->kategori_berita    = Input::get('kategori_berita');
+        $berita->isi                = Input::get('isi');
+        $berita->author             = $this->auth->user()->nama_pegawai;
+        $berita->counter            = 1;
+        
         if ($berita->save()) {
-            return response()->json(array('success' => TRUE, 'msg' => 'Data Berhasil Di Simpan'));
-        };
+            return redirect()->to('admin/berita')->with('alert','Data berhasil di simpan');
+        }
     }
 
     /**
@@ -103,8 +104,9 @@ class BeritaController extends Controller {
      */
     public function edit($id) {
         //
-        $data['title'] = 'Edit Berita';
-        $data['data'] = Berita::find($id);
+        $data['title']              = 'Edit Berita';
+        $data['data']               = Berita::find($id);
+        $data['kategori_berita']    = Kategori::all();
         return view('backend.berita.edit', $data);
     }
 
@@ -114,14 +116,35 @@ class BeritaController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(BeritaRequest $request, $id) {
-        //
-        $input = $request->all();
-        $input['author'] = $this->auth->user()->nama_pegawai;
+    public function update() {
+        
+        $id     = Input::get('id');
         $berita = Berita::find($id);
-        $berita->slug_berita    = Str::slug($request->judul_berita);
-        if ($berita->update($request->all())) {
-            return response()->json(array('success' => TRUE, 'msg' => 'Data Berhasil Dihapus'));
+
+        $cekinputgbr = Input::file('file');
+        if(!empty($cekinputgbr)) {
+            $oldfile            = Berita::where('id_berita',$id)->first();
+            File::delete('upload/berita/'.$oldfile->logo);
+
+            $thefile            = Input::file('file');
+            $lokasi_simpan      = 'upload/berita';
+            $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
+            $upload_gambar      = Input::file('file')->move($lokasi_simpan, $filename);
+
+            $berita->gambar     = $filename;
+        }
+
+        $berita->judul_berita       = Input::get('judul_berita');
+        $berita->slug_berita        = Str::slug(Input::get('judul_berita'));
+        $berita->kategori_berita    = Input::get('kategori_berita');
+        $berita->isi                = Input::get('isi');
+        $berita->tanggal            = date('Y-m-d');
+        $berita->waktu              = date('H:i:s');
+        $berita->author             = $this->auth->user()->nama_pegawai;
+        $berita->counter            = 1;
+        
+        if ($berita->save()) {
+            return redirect()->to('admin/berita')->with('alert','Data berhasil di simpan');
         }
     }
 

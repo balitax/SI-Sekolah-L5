@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Cookie\CookieJar;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Html;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+use App\Http\Requests\KontakRequest;
+use Symfony\Component\HttpFoundation\Response;
 
 class FrontController extends Controller {
 
@@ -18,23 +21,33 @@ class FrontController extends Controller {
     public function __construct() {
         $setting                        = Models\Setting::first();
         $this->data['menu']             = Models\Menu::with('child')->where('level', 0)->get();
-        $this->data['berita']           = Models\Berita::orderBy('id_berita', 'desc')->limit(3)->get();
-        $this->data['pengumuman']       = Models\Pengumuman::orderBy('tanggal', 'desc')->limit(5)->get();
+        $this->data['berita']           = Models\Berita::orderBy('id_berita', 'desc')->limit(6)->get();
+        $this->data['pengumuman']       = Models\Pengumuman::orderBy('tanggal', 'desc')->limit(10)->get();
         $this->data['agenda']           = Models\Agenda::orderBy('tgl_posting', 'desc')->limit(5)->get();
         $this->data['polling']          = Models\Polling::with('jawaban')->where('status', 'Y')->limit(1)->first();
         $this->data['title']            = $setting->title_web;
         $this->data['desc']             = $setting->desc_web;
         $this->data['key']              = $setting->key_web;
         $this->data['logo']             = $setting->logo;
+        $this->data['header_img']       = $setting->bg_header;
+        $this->data['icon']             = $setting->favicon;
         $this->data['facebook']         = $setting->facebook;
+        $this->data['peta_latitude']    = $setting->peta_latitude;
+        $this->data['peta_longitude']   = $setting->peta_longitude;
         $this->data['twitter']          = $setting->twitter;
         $this->data['gplus']            = $setting->gplus;
         $this->data['slider_home']      = Models\Berita::orderBy('tanggal', 'desc')->limit(5)->get();
+        $this->data['galeri_home']      = Models\Foto::OrderBy('id_foto','desc')->paginate(9);
+        $this->data['opini_home']       = Models\Berita::where('kategori_berita',5)->orderBy('id_berita','desc')->limit(6)->get();
+        $this->data['banner']           = Models\Banner::where('id',1)->first();
+        $this->data['link']             = Models\Link::orderBy('id','desc')->limit(5)->get();
+        $this->data['publikasi']        = Models\Publikasi::orderBy('id','desc')->limit(3)->get();
+        $this->data['setting']          = $setting;
+
         }
 
     public function index() {
-        //
-        return view('web.home', $this->data);
+        return view('bappeda.home', $this->data);
     }
 
     public function tambahpoll(CookieJar $cookieJar, Request $request) {
@@ -56,7 +69,8 @@ class FrontController extends Controller {
         $detail_halaman         = Models\Data::where('slug_data',$slug)->first();
         $this->data['page']     = $detail_halaman;
         $this->data['title']    = $detail_halaman->title;
-        return view('web.halaman', $this->data);
+        $this->data['desc']     = strip_tags(substr($detail_halaman->content,0,200));
+        return view('bappeda.halaman', $this->data);
     }
 
     public function absensi() {
@@ -92,6 +106,18 @@ class FrontController extends Controller {
         return view('web.datapegawai', $this->data);
     }
 
+    public function berita_utama() {
+        $this->data['title'] = 'Berita Utama';
+        $this->data['berita'] = Models\Berita::where('kategori_berita','2')->orderBy('id_berita', 'desc')->paginate(6);
+        return view('bappeda.berita', $this->data);
+    }
+
+    public function berita_opini() {
+        $this->data['title'] = 'Berita Opini';
+        $this->data['berita'] = Models\Berita::where('kategori_berita','5')->orderBy('id_berita', 'desc')->paginate(6);
+        return view('bappeda.berita', $this->data);
+    }
+
     public function beritalist() {
         $this->data['title'] = 'Berita Utama';
         $this->data['beritalist'] = Models\Berita::orderBy('id_berita', 'desc')->paginate(6);
@@ -104,13 +130,23 @@ class FrontController extends Controller {
         $this->data['beritalist']   = $berita_detail;
         $this->data['desc']         = substr($berita_detail->isi,0,200).'...';
         $this->data['key']          = $berita_detail->judul_berita;
-        return view('web.beritadetail', $this->data);
+        return view('bappeda.berita_detail', $this->data);
+    }
+
+    public function detail_pub($slug) {
+
+        $pub_det                    = Models\Publikasi::where('slug_publikasi',$slug)->first();
+        $this->data['title']        = $pub_det->judul_publikasi;
+        $this->data['pubdet']       = $pub_det;
+        $this->data['desc']         = substr($pub_det->deskripsi_publikasi,0,200).'...';
+        $this->data['key']          = $pub_det->judul_publikasi;
+        return view('bappeda.detail_publikasi', $this->data);
     }
 
     public function pengumumanlist() {
-        $this->data['title']            = 'Daftar Pengumuman Pengumuman';
+        $this->data['title']            = 'Daftar Informasi Penting';
         $this->data['pengumumanlist']   = Models\Pengumuman::orderBy('tanggal', 'desc')->paginate(5);
-        return view('web.pengumuman', $this->data);
+        return view('bappeda.informasi', $this->data);
     }
 
     public function pengumuman($slug) {
@@ -119,7 +155,7 @@ class FrontController extends Controller {
         $this->data['title']            = $pengumuman_detail->judul_pengumuman;;
         $this->data['desc']             = $pengumuman_detail->judul_pengumuman;
         $this->data['key']              = $pengumuman_detail->judul_pengumuman;
-        return view('web.pengumuman_detail', $this->data);
+        return view('bappeda.detail_informasi', $this->data);
     }
 
     public function agendalist() {
@@ -136,22 +172,37 @@ class FrontController extends Controller {
     }
 
     public function album() {
-        $this->data['title'] = 'Album Sekolah';
+        $this->data['title'] = 'Album Foto';
         $this->data['album'] = Models\Galeri::OrderBy('id_album','desc')->paginate(12);
-        return view('web.galeri', $this->data);
+        return view('bappeda.galeri', $this->data);
     }
 
     public function foto($id) {
-        $this->data['title'] = 'Album Sekolah';
+        $this->data['title'] = 'Album Foto';
         $album = Models\Foto::where('id_album',$id)->OrderBy('id_foto','desc')->paginate(12);
         $this->data['foto'] = $album;
-        return view('web.galeri_detail', $this->data);
+        return view('bappeda.galeri_detail', $this->data);
     }
 
     public function download() {
         $this->data['title'] = 'Download File';
         $this->data['download'] = Models\Upload::orderBy('tgl_posting')->paginate(10);
         return view('web.download', $this->data);
+    }
+
+    public function kontak() {
+        $this->data['title']    = 'Hubungi Kami';
+        return view('bappeda.kontak', $this->data);
+    }
+
+    public function kontak_send(KontakRequest $request) {
+        $input      = $request->all();
+
+        $kontak = new Models\Kontak($input);
+        if ($kontak->save()) {
+            return redirect()->to('hubungi-kami')->with('alert','Pesan Berhasil Di Kirim');
+        }
+
     }
 
 }

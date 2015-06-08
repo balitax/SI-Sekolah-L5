@@ -15,9 +15,11 @@ Route::get('/', ['as' => 'home', 'uses' => 'FrontController@index']);
 Route::get('/lihatpoll', 'FrontController@polling');
 Route::post('/tambahpoll', 'FrontController@tambahpoll');
 Route::get('/berita', 'FrontController@beritalist');
+Route::get('/berita/berita-utama', 'FrontController@berita_utama');
+Route::get('/berita/opini', 'FrontController@berita_opini');
 Route::get('/baca/berita/{slug}', 'FrontController@berita');
-Route::get('/pengumuman', 'FrontController@pengumumanlist');
-Route::get('/baca/pengumuman/{slug}', 'FrontController@pengumuman');
+Route::get('/informasi', 'FrontController@pengumumanlist');
+Route::get('/baca/informasi/{slug}', 'FrontController@pengumuman');
 Route::get('/agenda', 'FrontController@agendalist');
 Route::get('/baca/agenda/{slug}', 'FrontController@agenda');
 Route::get('/galeri', 'FrontController@album');
@@ -28,11 +30,14 @@ Route::get('/datasiswa', 'FrontController@datasiswa');
 Route::get('/dataguru', 'FrontController@dataguru');
 Route::get('/datapegawai', 'FrontController@datapegawai');
 Route::get('/absensi', 'FrontController@absensi');
+Route::get('/hubungi-kami', 'FrontController@kontak');
+Route::post('/hubungi-kami/send', 'FrontController@kontak_send');
+Route::get('/baca/publikasi/{slug}', 'FrontController@detail_pub');
 
-Route::group(array('middleware' => 'auth'), function(){
+
+Route::group(array('before' => 'auth'), function(){
     Route::controller('filemanager', 'FilemanagerLaravelController');
 });
-
 
 Route::get('/login', ['middleware' => 'guest', function() {
 return view('backend.login');
@@ -62,7 +67,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 }]);
     Route::resource('datastatis', 'Admin\DataStatisController');
     Route::resource('setting', 'Admin\SettingController');
+    Route::resource('setheader', 'Admin\HeaderController');
     Route::resource('datamenu','Admin\MenuController');
+    Route::resource('kategori','Admin\KategoriController');
     Route::resource('berita', 'Admin\BeritaController');
     Route::resource('pengumuman', 'Admin\PengumumanController');
     Route::resource('agenda', 'Admin\AgendaController');
@@ -79,20 +86,24 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('absensi/create', ['as' => 'admin.absensi.create', 'uses' => 'Admin\AbsensiController@create']);
     Route::post('absensi/show', ['as' => 'admin.absensi.show', 'uses' => 'Admin\AbsensiController@show']);
     Route::post('setting/save', 'Admin\SettingController@update');
-});
+    Route::post('setheader/save', 'Admin\HeaderController@update');
+    Route::post('berita/update', 'Admin\BeritaController@update');
+    Route::post('berita/save', 'Admin\BeritaController@store');
 
-Route::group(['prefix' => 'guru','middleware' => 'auth'], function() {
-    Route::get('/', function() {
-        $data['title'] = 'Home';
-        return view('guru.dashboard',$data);
-    });
-    Route::resource('pengumuman', 'Admin\PengumumanController');
-    Route::resource('upload', 'Admin\UploadController');
-    Route::resource('absensi', 'Admin\AbsensiController');
-    Route::get('pegawai/{id}', ['as' => 'guru.pegawai.edit', 'uses' => 'Admin\PegawaiController@edit']);
-    Route::put('pegawai/{id}', ['as' => 'guru.pegawai.update', 'uses' => 'Admin\PegawaiController@update']);
-    Route::post('absensi/create', ['as' => 'guru.absensi.create', 'uses' => 'Admin\AbsensiController@create']);
-    Route::post('absensi/show', ['as' => 'guru.absensi.show', 'uses' => 'Admin\AbsensiController@show']);
+    Route::resource('banner', 'Admin\BannerController');
+    Route::post('banner', 'Admin\BannerController@store');
+
+    Route::resource('link', 'Admin\LinkController');
+    Route::resource('publikasi', 'Admin\PublikasiController');
+    Route::post('publikasi/save', 'Admin\PublikasiController@store');
+    Route::get('publikasi/del/{any}', 'Admin\PublikasiController@destroy');
+
+    Route::post('galeri/save', 'Admin\GaleriController@store');
+    Route::post('galeri/update', 'Admin\GaleriController@update');
+
+    Route::resource('kontak','Admin\KontakController');
+
+
 });
 
 Route::group(['prefix' => 'api'], function() {
@@ -100,8 +111,14 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('datastatis/{id}', 'Admin\DataStatisController@show');
     Route::get('menu', 'Admin\DataStatisController@apiCreateMenu');
 
+    Route::get('pesan', 'Admin\KontakController@apiPesan');
+    Route::get('pesan/{id}', 'Admin\KontakController@show');
+
     Route::get('datamenu','Admin\MenuController@apiDataMenu');
     Route::get('datamenu/{id}', 'Admin\MenuController@show');
+
+    Route::get('kategori','Admin\KategoriController@apiDataKategori');
+    Route::get('kategori/{id}','Admin\KategoriController@show');
 
     Route::get('berita', 'Admin\BeritaController@apiBerita');
     Route::get('berita/{id}', 'Admin\BeritaController@show');
@@ -115,8 +132,15 @@ Route::group(['prefix' => 'api'], function() {
     Route::get('kelas', 'Admin\KelasController@apiKelas');
     Route::get('kelas/{id}', 'Admin\KelasController@show');
 
+    Route::get('link', 'Admin\LinkController@apiLink');
+    Route::get('link/{id}', 'Admin\LinkController@show');
+
+    Route::get('publikasi', 'Admin\PublikasiController@apiPublikasi');
+
     Route::get('setting', 'Admin\SettingController@apiSetting');
     Route::get('setting/{id}', 'Admin\SettingController@show');
+
+    Route::get('setting', 'Admin\SettingController@apiSetting');
 
 
     Route::get('kelas/{id}/siswa', 'Admin\SiswaController@apiSiswa');

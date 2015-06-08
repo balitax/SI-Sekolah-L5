@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SettingRequest;
 use App\Models\Setting;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\File;
@@ -56,8 +55,10 @@ class SettingController extends Controller {
 
         $cekinputlogo = Input::file('file');
 
+        $cekinputicon = Input::file('favicon');
+
+        // Logo Website
         if(!empty($cekinputlogo)) {
-//            $gbr_lama = DB::table('s_logo_web')->select('logo')->where('id',$id)->first();
             $oldfile            = Setting::where('id_setting',$id)->first();
             File::delete('upload/logo/'.$oldfile->logo);
 
@@ -66,14 +67,34 @@ class SettingController extends Controller {
             $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
             $upload_gambar      = Input::file('file')->move($lokasi_simpan, $filename);
 
-            $setting->logo              = $filename;
+            $setting->logo      = $filename;
         }
+
+        // Favicon Website
+        if(!empty($cekinputicon)) {
+            $oldfile            = Setting::where('id_setting',$id)->first();
+            File::delete('upload/logo/'.$oldfile->favicon);
+
+            $thefile            = Input::file('favicon');
+            $lokasi_simpan      = 'upload/logo';
+            $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
+            $upload_gambar      = Input::file('favicon')->move($lokasi_simpan, $filename);
+
+            $setting->favicon   = $filename;
+        }
+
         $setting->title_web         = Input::get('title_web');
         $setting->desc_web          = Input::get('desc_web');
         $setting->key_web           = Input::get('key_web');
+        $setting->peta_latitude     = Input::get('peta_latitude');
+        $setting->peta_longitude    = Input::get('peta_longitude');
         $setting->facebook          = Input::get('facebook');
         $setting->twitter           = Input::get('twitter');
         $setting->gplus             = Input::get('gplus');
+        $setting->alamat            = Input::get('alamat');
+        $setting->no_telp           = Input::get('no_telp');
+        $setting->no_fax            = Input::get('no_fax');
+        $setting->email             = Input::get('email');
 
         if ($setting->save()) {
             return redirect()->back()->with('alert','Data berhasil di simpan');

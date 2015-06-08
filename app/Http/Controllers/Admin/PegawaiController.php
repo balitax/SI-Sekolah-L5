@@ -22,7 +22,7 @@ class PegawaiController extends Controller {
 
     public function index() {
         //
-        $data['title'] = 'Data Pegawai';
+        $data['title'] = 'Manajemen User Website';
         return view('backend.pegawai.index', $data);
     }
 
@@ -38,7 +38,7 @@ class PegawaiController extends Controller {
      */
     public function create() {
         //
-        $data['title'] = 'Tambah Pegawai';
+        $data['title'] = 'Tambah User';
         return View('backend.pegawai.create', $data);
     }
 
@@ -51,6 +51,7 @@ class PegawaiController extends Controller {
         //
         $input = $request->all();
         $pegawai = new Pegawai($input);
+        $pegawai->status = "admin";
         if ($pegawai->save()) {
             return response()->json(array('success' => TRUE));
         }
@@ -76,12 +77,9 @@ class PegawaiController extends Controller {
      */
     public function edit($id) {
         //
-        $data['title'] = 'Edit Pegawai';
+        $data['title'] = 'Edit Profil User';
         $data['data'] = Pegawai::find($id);
-        if ($this->auth->user()->status == 'admin') {
-            return view('backend.pegawai.edit', $data);
-        }
-        return view('guru.pegawai.edit', $data);
+        return view('backend.pegawai.edit', $data);
     }
 
     /**
@@ -94,6 +92,7 @@ class PegawaiController extends Controller {
         //
         $input = $request->all();
         $pegawai = Pegawai::find($id);
+        $pegawai->status = "admin";
         if ($pegawai->update($input)) {
             // return response()->json(array('success' => TRUE));
             return response()->json(['success' => true, 'msg' => 'Data Behasil Di Perbarui']);

@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Galeri;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Input;
 
 class GaleriController extends Controller {
 
@@ -52,11 +54,21 @@ class GaleriController extends Controller {
      * @return Response
      */
     public function store(GaleriRequest $request) {
-        //
+
         $input = $request->all();
         $galeri = new Galeri($input);
+
+        $cekcover = Input::file('cover_album');
+        if(!empty($cekcover)) {
+            $thefile            = Input::file('cover_album');
+            $lokasi_simpan      = 'upload/album';
+            $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
+            $upload_gambar      = Input::file('cover_album')->move($lokasi_simpan, $filename);
+
+            $galeri->cover_album      = $filename;
+        }
         if ($galeri->save()) {
-            return response()->json(array('success' => TRUE));
+            return redirect()->to('admin/galeri');
         }
     }
 
@@ -91,12 +103,26 @@ class GaleriController extends Controller {
      * @param  int  $id
      * @return Response
      */
-    public function update(GaleriRequest $request, $id) {
-        //
-        $input = $request->all();
-        $galeri = Galeri::find($id);
-        if ($galeri->update($input)) {
-            return response()->json(array('success' => TRUE));
+    public function update() {
+        $id                         = Input::get('id');
+        $galeri                     = Galeri::find($id);
+        $cekcover                   = Input::file('cover_album');
+        $galeri->nama_album         = Input::get('nama_album');
+
+        if(!empty($cekcover)) {
+
+            $oldfile            = Galeri::where('id_album',$id)->first();
+            File::delete('upload/album/'.$oldfile->cover_album);
+
+            $thefile            = Input::file('cover_album');
+            $lokasi_simpan      = 'upload/album';
+            $filename           = str_random(30).'.'.$thefile->getClientOriginalExtension();
+            $upload_gambar      = Input::file('cover_album')->move($lokasi_simpan, $filename);
+
+            $galeri->cover_album      = $filename;
+        }
+        if ($galeri->save()) {
+            return redirect()->to('admin/galeri');
         }
     }
 

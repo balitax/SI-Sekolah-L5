@@ -27,11 +27,8 @@ class PegawaiRequest extends Request {
             $pass = 'required_with:username|min:5';
         }
         return [
-            'nip' => 'required|numeric|unique:tbl_kepegawaian,nip,'.Request::get('id_kepegawaian').',id_kepegawaian',
-            'nama_pegawai' => 'required',
-            'kelahiran' => 'required',
+            'nama_pegawai' => 'required|unique:tbl_kepegawaian,nama_pegawai,'.Request::get('id_kepegawaian').',id_kepegawaian',
             'jk' => 'required',
-            'status' => 'required',
             'username' => 'required|min:5|max:20|unique:tbl_kepegawaian,username,'.Request::get('id_kepegawaian').',id_kepegawaian',
             'password' => $pass
         ];
@@ -39,13 +36,9 @@ class PegawaiRequest extends Request {
 
     public function messages() {
         return [
-            'nip.required' => 'NIP Diperlukan!',
-            'nip.numeric' => 'NIP hanya boleh angka saja!',
-            'nip.unique' => 'NIP sudah terpakai!',
             'nama_pegawai.required' => 'Nama Pegawai Diperlukan',
-            'kelahiran.required' => 'Kelahiran Diperlukan!',
+            'nama_pegawai.unique' => 'Nama Pegawai Sudah Terpakai',
             'jk.required' => 'Jenis Kelamin Diperlukan',
-            'status.required' => 'Status Diperlukan',
             'username.required' => 'Username diperlukan',
             'username.min' => 'Username minimal 5 karakter',
             'username.max' => 'Username max 20 karakter',
