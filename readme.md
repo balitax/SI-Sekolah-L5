@@ -1,4 +1,4 @@
-## MOHON MAAF, BELUM SEMPAT UNTUK MAINTENANCE PROGRAM INI. KALAU SUDAH LONGGAR AKAN SAYA UPDATE DAN COMMIT BUG BUG YANG ADA. SEJAUH INI MASIH BELUM ADA WAKTU / LIBUR SELAMA PUASA :-)
+## Warning!!!, Repo Aplikasi ini sudah tidak di update dan di maintain oleh pemilik, karena sudah tidak fokus di web dev
 
 ## SI / Website Sekolah Menggunakan Laravel 5
 
